@@ -49,14 +49,14 @@ HomeScreen.navigationOptions = {
 const MainScreenNavigator =  TabNavigator({
   Home: {screen: HomeScreen },
   Recent: {
-    screen: props => <RecentChat styles={styles} />, 
+    screen: props => <RecentChat styles={styles} navigation={this.props.navigate} />, 
     navigationOptions: {
       tabBarLabel: 'Recent',
       tabBarIcon: <Ionicons name={'ios-time-outline'} size={26} style={{color: '#2980b9'}}/>
     },
-  }, 
+  },
   Contacts: {
-      screen: props => <ContactsView data={MY_CONTACTS} styles={styles}/>, 
+      screen: props => <ContactsView data={MY_CONTACTS} styles={styles}/>,
        navigationOptions: {
         tabBarLabel: 'My Contacts',
         tabBarIcon: <Ionicons name={'ios-contact-outline'} size={26} style={{ color: '#2980b9' }} />,
@@ -74,7 +74,7 @@ class ChatScreen extends React.Component {
     const {state, setParams} =  navigation;
     const isInfo = state.params.mode === 'info';
     const {user} = state.params;
-    
+
     return {
       title: isInfo ? `${user}'s Contact Info` : `Chatting with ${state.params.user}`,
       headerRight: (
@@ -83,7 +83,7 @@ class ChatScreen extends React.Component {
       ),
     };
   };
-  
+
   render() {
     const { params } = this.props.navigation.state;
     return (
@@ -124,23 +124,23 @@ class ChatScreen extends React.Component {
           handleSend={() => {}} //push message to json stack trace or locally save it
           onErrorButtonPress={() => {}}
           maxHeight={Dimensions.get('window').height - 20}
-      
+
           loadEarlierMessagesButton={false}
           onLoadEarlierMessages={() => {}}
-      
+
           senderName="Becky"
           senderImage={null}
           onImagePress={() => {}}
           displayNames={true
           }
-    
+
           parseText={true}
           handlePhonePress={() => {}}
           handleUrlPress={() => {}}
           handleEmailPress={() => {}}
-      
+
           isLoadingEarlierMessages={false}
-      
+
           typingMessage={"typing..."}
         />
       </View>

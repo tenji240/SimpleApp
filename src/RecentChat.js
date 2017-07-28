@@ -2,7 +2,7 @@ import React, { Component, } from 'react';
 import { View, Text, Button} from 'react-native';
 
 class RecentChat extends Component {
-  
+
   constructor(props: any) {
     super(props);
   }
