@@ -9,12 +9,13 @@ class ContactsView extends Component {
 
   render() {
     let contacts =  this.props.data;
+    let styles =  this.props.styles;
     return (
-      <View>
+      <View style={styles.container}>
         <Text>Contact List</Text>
         <FlatList
           data={contacts}
-          renderItem={({item}) => <Text>{item.key}</Text>}
+          renderItem={({item}) => <Text style={styles.contact}>{item.key}</Text>}
         />
       </View>
     )

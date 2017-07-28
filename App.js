@@ -55,7 +55,7 @@ const MainScreenNavigator =  TabNavigator({
   Home: {screen: HomeScreen },
   Recent: {screen: RecentChatsScreen}, 
   All: {
-      screen: props => <ContactsView data={MY_CONTACTS}/>, 
+      screen: props => <ContactsView data={MY_CONTACTS} styles={styles}/>, 
        navigationOptions: {
         tabBarLabel: 'My Contacts',
         tabBarIcon: <Ionicons name={'ios-contact-outline'} size={26} style={{ color: '#2980b9' }} />,
