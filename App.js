@@ -1,3 +1,4 @@
+//Global React Native Imports
 import GiftedMessenger from 'react-native-gifted-messenger'
 import React from 'react';
 import { AppRegistry, Text, View, Button, Dimensions, FlatList,} from 'react-native';
@@ -5,6 +6,7 @@ import {StackNavigator, TabNavigator} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Imports
+import ContactsView  from './src/ContactsView.js';
 import MY_CONTACTS from './src/data/contacts.json';
 import styles from './src/mincss/minspec.json';
 
@@ -13,9 +15,6 @@ class RecentChatsScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>List of Recent Chats</Text>
-        <FlatList 
-          data={MY_CONTACTS}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>} />
         <Button onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
           title="Chat with Lucy"/>
       </View>
@@ -29,23 +28,9 @@ RecentChatsScreen.navigationOptions = {
   tabBarIcon: <Ionicons name={'ios-time-outline'} size={26} style={{color: '#2980b9'}}/>
 };
 
-class AllContactsScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Contact List</Text>
-        <FlatList
-          data={MY_CONTACTS}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        />
-      </View>
-    );
-  }
-}
-
-// Settings for All Contacts
-AllContactsScreen.navigationOptions = {
-  tabBarLabel: 'Contacts',
+// New Contacts Setup
+ContactsView.navigationOptions = {
+  tabBarLabel: 'My Contacts',
   tabBarIcon: <Ionicons name={'ios-contact-outline'} size={26} style={{ color: '#2980b9' }} />,
 };
 
@@ -57,7 +42,7 @@ class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
+      <View style={styles.container}>
         <Text>Hello, Chat App!</Text>
       </View>
     );
@@ -75,7 +60,7 @@ HomeScreen.navigationOptions = {
 const MainScreenNavigator =  TabNavigator({
   Home: {screen: HomeScreen },
   Recent: {screen: RecentChatsScreen}, 
-  All: {screen: AllContactsScreen },
+  All: {screen: ContactsView },
 });
 
 MainScreenNavigator.navigationOptions = {
