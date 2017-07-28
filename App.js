@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Imports
 import ContactsView from './src/ContactsView.js';
+import RecentChat from './src/RecentChat.js';
 import MY_CONTACTS from './src/data/contacts.json';
 import styles from './src/mincss/minspec.json';
 
@@ -21,12 +22,6 @@ class RecentChatsScreen extends React.Component {
     );
   }
 }
-
-//Settings for Recent Chat
-RecentChatsScreen.navigationOptions = {
-  tabBarLabel: 'Recent',
-  tabBarIcon: <Ionicons name={'ios-time-outline'} size={26} style={{color: '#2980b9'}}/>
-};
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -53,8 +48,14 @@ HomeScreen.navigationOptions = {
 //Main Tab Navigation
 const MainScreenNavigator =  TabNavigator({
   Home: {screen: HomeScreen },
-  Recent: {screen: RecentChatsScreen}, 
-  All: {
+  Recent: {
+    screen: props => <RecentChat styles={styles} />, 
+    navigationOptions: {
+      tabBarLabel: 'Recent',
+      tabBarIcon: <Ionicons name={'ios-time-outline'} size={26} style={{color: '#2980b9'}}/>
+    },
+  }, 
+  Contacts: {
       screen: props => <ContactsView data={MY_CONTACTS} styles={styles}/>, 
        navigationOptions: {
         tabBarLabel: 'My Contacts',
