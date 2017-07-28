@@ -12,7 +12,6 @@ class RecentChat extends Component {
     return (
       <View style={styles.container}>
         <Text>List of Recent Chats</Text>
-        <Button onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })} title="Chat with Lucy"/> 
       </View>
     )
   }
