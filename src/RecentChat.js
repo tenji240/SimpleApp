@@ -11,7 +11,7 @@ class RecentChat extends Component {
     let styles =  this.props.styles;
     return (
       <View style={styles.container}>
-        <Text>List of Recent Chats</Text>
+        <Text>List of Recent Messages</Text>
       </View>
     )
   }
