@@ -7,20 +7,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //Imports
 import ContactsView from './src/ContactsView.js';
 import RecentChat from './src/RecentChat.js';
+
 import MY_CONTACTS from './src/data/contacts.json';
 import styles from './src/mincss/minspec.json';
 
-class RecentChatsScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>List of Recent Chats</Text>
-        <Button onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
-          title="Chat with Lucy"/>
-      </View>
-    );
-  }
-}
 
 class HomeScreen extends React.Component {
   static navigationOptions = {

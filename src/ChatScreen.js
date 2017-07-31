@@ -1,5 +1,6 @@
 import React, { Component, } from 'react'
 import { View, Button,} from 'react-native'
+import {TabNavigator} from 'react-navigation'
 import GiftedMessenger from 'react-native-gifted-messenger'
 
 //Temp Chat Screen Component
