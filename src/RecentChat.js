@@ -1,30 +1,26 @@
 import React, { Component, } from 'react';
 import { View, Text, Button} from 'react-native';
-import {TabNavigator} from 'react-navigation'
-import ChatScreen from './ChatScreen.js'
 
-class RecentChat extends Component {
-
+class RecentChat extends React.Component {
   constructor(props: any) {
     super(props);
+    this.goToChat = this.goToChat.bind(this);
+  }
+
+  goToChat(){
+    return this.props.onNavDirect;
   }
 
   render() {
-    let styles =  this.props.styles;
+    let styles = this.props.styles;
+
     return (
       <View style={styles.container}>
         <Text>List of Recent Messages</Text>
-        <Button onPress={() => this.props.navigation.navigate('Chat', { user: 'Billy' })}
-          title="Chat with Billy"
-        />
+        <Button onPress={this.goToChat} title="Chat it up!" />
       </View>
     )
   }
 }
-
-const ChatNavigator = TabNavigator({
-  Recent: {screen: RecentChat},
-  Chat: {screen: ChatScreen},
-});
 
 export default RecentChat;

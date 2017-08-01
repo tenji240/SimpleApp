@@ -1,4 +1,15 @@
 {
-  container : { flex: 1, padding: 10, },
-  contact: { padding: 10, fontSize: 18, height: 44, color: 'black'},
+  container: {
+    flex: 1,
+    padding: 10,
+  },
+  contact: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+    color: 'black'
+  },
+  icon: {
+    color: '#2980b9'
+  },
 }
