@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, Button} from 'react-native'
+import { Header } from 'react-native-elements'
 
 class Favorites extends React.Component {
   constructor(props : any) {
@@ -11,7 +12,7 @@ class Favorites extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>Favorites</Text>
+        <Header centerComponent={{ text: 'FAVORITES', style: { color: '#000' } }}/>
       </View>
     )
   }

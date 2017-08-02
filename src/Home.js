@@ -1,5 +1,6 @@
 import React, { Component, } from 'react';
 import { View, Text} from 'react-native';
+import { Header } from 'react-native-elements';
 
 class HomeScreen extends React.Component {
 
@@ -15,7 +16,7 @@ class HomeScreen extends React.Component {
     let styles =  this.props.styles;
     return (
       <View style={styles.container}>
-        <Text>Welcome to News</Text>
+        <Header centerComponent={{ text: 'HOME', style: { color: '#000' } }}/>
       </View>
     );
   }
