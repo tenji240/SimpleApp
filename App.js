@@ -15,7 +15,7 @@ import styles from './src/mincss/minspec.json';
 //Main Tab Navigation
 const MainScreenNavigator = TabNavigator({
   Home: {
-    screen: HomeScreen,
+    screen: props => <HomeScreen styles={styles}/>,
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: <Ionicons name={'ios-home-outline'} size={26} style={{ color: '#2980b9' }}/>

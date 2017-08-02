@@ -12,6 +12,7 @@ class HomeScreen extends React.Component {
   };
 
   render() {
+    let styles =  this.props.styles;
     return (
       <View style={styles.container}>
         <Text>Welcome to News</Text>
