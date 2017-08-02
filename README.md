@@ -22,8 +22,8 @@
 ### Troubleshooting
 - `Unexpected Character in whatever.png` - you'll have to restart the packager. If it's running via terminal, kill the process and restart it. If it's running via Deco, kill Deco and restart. If it doesn't work, restart your computer
 
-
 ### Relevant Documentation
 - [React](https://facebook.github.io/react/)
 - [React Native](https://facebook.github.io/react-native/)
 - [React Navigator](https://reactnavigation.org/)
+- [Vector Icons](https://oblador.github.io/react-native-vector-icons/)
