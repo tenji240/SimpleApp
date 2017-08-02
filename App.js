@@ -11,11 +11,12 @@ import Explore from './src/Explore.js';
 import HomeScreen from './src/Home.js';
 
 import styles from './src/mincss/minspec.json';
+import NEWS from './src/data/news.json';
 
 //Main Tab Navigation
 const MainScreenNavigator = TabNavigator({
   Home: {
-    screen: props => <HomeScreen styles={styles}/>,
+    screen: props => <HomeScreen styles={styles} news={NEWS}/>,
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: <Ionicons name={'ios-home-outline'} size={26} style={{ color: '#2980b9' }}/>

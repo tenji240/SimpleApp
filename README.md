@@ -28,3 +28,4 @@
 - [React Native](https://facebook.github.io/react-native/)
 - [React Navigator](https://reactnavigation.org/)
 - [Vector Icons](https://oblador.github.io/react-native-vector-icons/)
+- [React Native UI Elements](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
