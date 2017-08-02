@@ -1,6 +1,6 @@
 ## Demo React News App README
 
-#### Before starting
+### Before starting
 - make sure you have Xcode installed and up to date to the latest CLI
 - update brew
 - install brew and watchman: `brew install node && brew install watchman`
