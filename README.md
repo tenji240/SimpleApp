@@ -19,8 +19,9 @@
 - After installing Deco, add the repo to the project view
 - Hit the Simulator button, select an iOS device, and voila
 
-### Troubleshooting
+### Troubleshooting & notes
 - `Unexpected Character in whatever.png` - you'll have to restart the packager. If it's running via terminal, kill the process and restart it. If it's running via Deco, kill Deco and restart. If it doesn't work, restart your computer
+- When installing new packages via `yarn` or `npm`, be sure to run `react-native link` to link the dependencies to the Xcode build. This is especially necessary with external fonts and iconography as these can break the build.
 
 ### Relevant Documentation
 - [React](https://facebook.github.io/react/)

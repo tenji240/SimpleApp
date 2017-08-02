@@ -8,29 +8,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import SavedStories from './src/SavedStories.js';
 import Favorites from './src/Favorites.js';
 import Explore from './src/Explore.js';
+import HomeScreen from './src/Home.js';
 
-import MY_CONTACTS from './src/data/contacts.json';
 import styles from './src/mincss/minspec.json';
-
-class HomeScreen extends React.Component {
-
-  constructor(props : any) {
-    super(props);
-  }
-
-  static navigationOptions = {
-    title: 'Welcome'
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Welcome to News</Text>
-      </View>
-    );
-  }
-}
-
 
 //Main Tab Navigation
 const MainScreenNavigator = TabNavigator({
