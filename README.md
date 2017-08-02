@@ -1,4 +1,4 @@
-## Demo React Chat App README
+## Demo React News App README
 
 #### Before starting
 - make sure you have Xcode installed and up to date to the latest CLI
